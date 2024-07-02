@@ -6,6 +6,8 @@ const websiteTitle = 'Title';
 const navLinks = [
     {path: '/', label: 'Home'},
     {path: '/contact', label: 'Contact'},
+    {path: '/about', label: 'About'},
+    {path: '/services', label: 'Services'},
 ];
 
 export default function Header() {
@@ -29,8 +31,7 @@ export default function Header() {
         };
     }, []);
 
-    return (
-        <header className="header">
+    return (<header className="header">
             <div className="logo">
                 <span className="brand">{websiteTitle}</span>
             </div>
@@ -39,8 +40,7 @@ export default function Header() {
                     {navLinks.map((link, index) => (
                         <li key={index} className={`${link.path === '/' ? 'nav-item' : ''} ${isOpen ? 'visible' : ''}`}>
                             <NavLink to={link.path} className="nav-link open-sans-nav-items">{link.label}</NavLink>
-                        </li>
-                    ))}
+                        </li>))}
                 </ul>
             </nav>
             <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
@@ -48,6 +48,5 @@ export default function Header() {
                 <span></span>
                 <span></span>
             </div>
-        </header>
-    );
+        </header>);
 }
