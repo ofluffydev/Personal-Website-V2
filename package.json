@@ -22,7 +22,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "jest",
-    "update": "yarn upgrade --latest"
+    "update": "yarn upgrade --latest",
+    "gitpush": ".\\gitpush.bat"
   },
   "dependencies": {
     "react": "^18.2.0",
