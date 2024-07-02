@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+  background: #2e2e2e;
+  margin: 0;
+  color: white;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  padding-top: 80px; // Add padding to prevent content from being hidden behind the sticky header
+}
+
+header .header {
+  width: 100vw;
+  overflow-x: visible;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  position: fixed; // Make the header sticky
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease; // Add transition for background color
+
+  .logo {
+    .brand {
+      font-size: 1.5em;
+      font-family: "Open Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+  }
+
+  .navigation {
+    display: none;
+
+    &.open {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 998;
+
+      ul {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.3s ease, transform 0.3s ease; // Add transitions for opacity and transform
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(-20px);
+
+      li {
+        margin-bottom: 20px;
+
+        .nav-link {
+          color: white;
+          text-decoration: none;
+          padding: 10px;
+          font-size: 1.5em;
+
+          &:hover {
+            background-color: #555;
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 999;
+
+    span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin-bottom: 5px;
+      transition: transform 0.3s ease, opacity 0.3s ease; // Add transitions for transform and opacity
+    }
+
+    &.open {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -8px);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .navigation {
+      display: block;
+
+      &.open {
+        position: static;
+        background-color: transparent;
+
+        ul {
+          opacity: 1;
+          transform: translateY(0);
+          transition: none;
+        }
+      }
+
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        opacity: 1;
+        transform: translateY(0);
+
+        li {
+          margin-left: 20px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+}
+
+.open-sans-titles {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.open-sans-nav-items {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
