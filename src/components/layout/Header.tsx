@@ -1,14 +1,8 @@
-import {NavLink} from "react-router-dom";
+// Header.tsx
 import {useEffect, useState} from "react";
-
-const websiteTitle = 'Title';
-
-const navLinks = [
-    {path: '/', label: 'Home'},
-    {path: '/contact', label: 'Contact'},
-    {path: '/about', label: 'About'},
-    {path: '/services', label: 'Services'},
-];
+import {NAV_LINKS, WEBSITE_TITLE} from "../../constants";
+import {generateNavItems} from "../../fluffy-pack/utils/navigationUtils";
+import {SimpleHamburger} from "./../../fluffy-pack/components/SimpleHamburger";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,21 +26,14 @@ export default function Header() {
     }, []);
 
     return (<header className="header">
-            <div className="logo">
-                <span className="brand">{websiteTitle}</span>
-            </div>
-            <nav className={`navigation ${isOpen ? 'open' : ''}`}>
-                <ul>
-                    {navLinks.map((link, index) => (
-                        <li key={index} className={`${link.path === '/' ? 'nav-item' : ''} ${isOpen ? 'visible' : ''}`}>
-                            <NavLink to={link.path} className="nav-link open-sans-nav-items">{link.label}</NavLink>
-                        </li>))}
-                </ul>
-            </nav>
-            <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </header>);
+        <div className="logo">
+            <span className="brand">{WEBSITE_TITLE}</span>
+        </div>
+        <nav className={`navigation ${isOpen ? 'open' : ''}`}>
+            <ul>
+                {generateNavItems({navLinks: NAV_LINKS, isOpen})}
+            </ul>
+        </nav>
+        <SimpleHamburger isOpen={isOpen} toggleMenu={toggleMenu}/>
+    </header>);
 }
