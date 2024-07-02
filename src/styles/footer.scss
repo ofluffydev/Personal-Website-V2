@@ -1,14 +1,10 @@
 // footer.scss
+@import 'App';
 
-// Variables
-$primary-color: #fff;
-$secondary-color: #666;
-$background-color: #212121;
-$link-color: #ab47bc;
-$link-hover-color: #e1bee7;
+$footer-background-color: #333;
 
 footer {
-  background-color: $background-color;
+  background-color: $footer-background-color;
   color: $primary-color;
   font-family: Arial, sans-serif;
   padding: 2rem 0;
