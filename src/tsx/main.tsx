@@ -1,40 +1,19 @@
-import React from 'react';
 import {createRoot} from 'react-dom/client';
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Contact from './Contact';
-import Home from "./Home";
-import App from "./App";
-import ErrorPage from "./ErrorPage";
+import {RouterProvider} from "react-router-dom";
 import '../styles/App.scss'
+import router from "./router.tsx";
+import {StrictMode} from "react";
+import Fallback from "./Fallback.tsx";
+import {renderToString} from "react-dom/server";
 
-// Import bootstrap
+const rootElement = document.getElementById('roovt');
 
-
-const router = createBrowserRouter([
-    {
-        element: <App/>,
-        errorElement: <ErrorPage/>,
-        children: [
-            {
-                path: "/",
-                element: <Home/>,
-            },
-            {
-                path: "/contact",
-                element: <Contact/>,
-            },
-        ],
-    },
-]);
-
-const rootElement = document.getElementById('root');
 if (rootElement) {
     const root = createRoot(rootElement);
-    root.render(
-        <React.StrictMode>
-            <RouterProvider router={router}/>
-        </React.StrictMode>
-    );
+    root.render(<StrictMode>
+        <RouterProvider router={router}/>
+    </StrictMode>);
 } else {
     console.error("Container element not found!");
+    document.body.innerHTML = renderToString(<Fallback/>);
 }
