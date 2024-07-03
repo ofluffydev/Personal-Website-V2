@@ -5,6 +5,7 @@ import router from "./components/layout/router";
 import {StrictMode} from "react";
 import Fallback from "./components/Fallback";
 import {renderToString} from "react-dom/server";
+import {SUPPORT_EMAIL} from "./constants.tsx";
 
 const rootElement = document.getElementById('root');
 
@@ -15,5 +16,5 @@ if (rootElement) {
     </StrictMode>);
 } else {
     console.error("Container element not found!");
-    document.body.innerHTML = renderToString(<Fallback/>);
+    document.body.innerHTML = renderToString(<Fallback supportEmail={SUPPORT_EMAIL}/>);
 }

@@ -1,10 +1,10 @@
 import {createBrowserRouter} from "react-router-dom";
 import App from "../../App";
-import ErrorPage from "../ErrorPage";
 import Home from "../../pages/Home";
 import Contact from "../../pages/Contact";
 import About from "../../pages/About";
 import Services from "../../pages/Services";
+import ErrorPage from "../../fluffy-pack/components/ErrorPage.tsx";
 
 const router = createBrowserRouter([{
     element: <App/>, errorElement: <ErrorPage/>, children: [{
