@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
 import '../../styles/footer.scss'
-import {COMPANY_NAME, GITHUB} from "../../constants.tsx";
+import {COMPANY_NAME, GITHUB, NAV_LINKS} from "../../constants.tsx";
 
 const Footer = () => {
     const [currentYear] = useState(new Date().getFullYear());
@@ -16,10 +16,9 @@ const Footer = () => {
                 <div>
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/services">Services</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
+                        {NAV_LINKS.map((link, index) => (<li key={index}>
+                            <Link to={link.path}>{link.label}</Link>
+                        </li>))}
                     </ul>
                 </div>
                 <div>

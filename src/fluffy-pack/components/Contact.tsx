@@ -1,4 +1,4 @@
-import {FC, FormEvent, ReactNode, useState} from 'react';
+import {ChangeEvent, FC, FormEvent, ReactNode, useState} from 'react';
 import {Globe, Mail, MailWarning, Phone} from 'lucide-react';
 import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
 import {Button} from '@/components/ui/button';
@@ -24,7 +24,7 @@ const Contact: FC<ContactProps> = ({
     });
     const [formSubmitted, setFormSubmitted] = useState(false);
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const {name, value} = e.target;
         setFormData(prevData => ({
             ...prevData, [name]: value

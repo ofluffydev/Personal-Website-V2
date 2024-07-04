@@ -1,6 +1,6 @@
 import {ReactElement} from "react";
 import {InView} from "react-intersection-observer";
-import {ChevronDown} from "lucide-react";
+import {ArrowDown} from "lucide-react";
 
 /**
  * `Hero` component props definition.
@@ -39,7 +39,7 @@ const Hero = ({welcomeText, secondaryText}: HeroProps): ReactElement => {
                     {secondaryText}
                 </p>}
             </InView>
-            <ChevronDown className={'animate-bounce flex justify-center items-center h-10 w-screen'}/>
+            <ArrowDown className={'animate-bounce flex justify-center items-center mt-10 w-screen'}/>
         </div>
     </div>;
 };

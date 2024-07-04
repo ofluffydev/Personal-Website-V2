@@ -1,7 +1,9 @@
+import WebsiteDesignAndDevelopment from "@/components/services/WebsiteDesignAndDevelopment.tsx";
+
 function Services() {
     return(
         <>
-            <p>Services Page!</p>
+            <WebsiteDesignAndDevelopment/>
         </>
     );
 }

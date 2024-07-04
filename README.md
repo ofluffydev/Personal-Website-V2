@@ -34,7 +34,8 @@ finishing my existing projects and creating more courses.
 - URL: `https://kadenfrisk.com/`
 - Description: The home page of my website, where it all begins.
 - Key Elements:
-    - TODO: Add key elements
+    - Showcases all my website, repositories, and courses.
+    - Has clean and simple animations.
 
 ### page name (Template for adding more pages)
 
@@ -45,21 +46,44 @@ finishing my existing projects and creating more courses.
     - Element 2
     - Add more key elements as needed
 
+### Home
+
+- URL: `/`
+- Description: Main page for the website, where it all begins.
+- Key Elements:
+    - Fancy hero section
+    - A little section about me
+    - Special use of the github API to show my repositories
+    - A section for my courses
+    - A section for people who need websites
+
+### Contact
+
+- URL: `/contact`
+- Description: Page just for contacting me
+- Key Elements:
+    - All my contact options
+    - An interactive contact form
+    - Uses the mailgun API to send emails
+
 ## Technologies Used
 
 - Frontend: React.js, TypeScript
 - Routing: React Router
-- Styling: I refused to use bootstrap for this website, the only help I had is from SCSS.
+- Styling: SCSS and Tailwind CSS with some custom CSS.
 - Build Tool: Vite
 - Linting: ESLint
-- TODO: Add any other significant technologies, libraries, or tools used
+- Icons: [Lucide](https://lucide.dev/), and [Simple Icons](https://simpleicons.org/)
+- Hosting: Cloudflare Pages
+- CI/CD: GitHub Actions
+- UI Library: [shadcn/ui](https://ui.shadcn.com/)
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js (version X.X.X or higher)
-- Yarn package manager
+- npm package manager
 
 ### Installation
 
@@ -151,10 +175,7 @@ suggestions or improvements, feel free to open an issue or a pull request.
 This project is licensed under the [LICENSE NAME] - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Contact
-
-Kaden Frisk - [your email or contact information]
-
-Project Link: [https://github.com/yourusername/your-repo-name](https://github.com/yourusername/your-repo-name)
+All my contacts are on the website at https://kadenfrisk.com/contact
 
 ---
 

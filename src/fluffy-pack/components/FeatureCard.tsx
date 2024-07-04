@@ -1,9 +1,10 @@
 import {InView} from "react-intersection-observer";
+import {ReactNode} from "react";
 
 interface FeatureCardProps {
     title: string;
     description: string;
-    icon?: (props: { className?: string }) => React.ReactNode;
+    icon?: (props: { className?: string }) => ReactNode;
     }
 
 function FeatureCard({title, description, icon}: FeatureCardProps) {
