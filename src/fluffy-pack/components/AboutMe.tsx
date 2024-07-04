@@ -1,4 +1,4 @@
-import {ArrowRight, Book, Briefcase, Code} from 'lucide-react';
+import {ArrowBigDown, Book, Briefcase, Code} from 'lucide-react';
 import {FC, ReactElement} from "react";
 import {InView} from "react-intersection-observer";
 
@@ -8,14 +8,14 @@ import {InView} from "react-intersection-observer";
  * @prop {string[]} roles - An array of roles or titles.
  * @prop {string} [tinyText] - Optional small introductory text.
  * @prop {string} [shortDescription] - Optional short description about the person.
- * @prop {string} buttonText - Text for the main action button.
+ * @prop {string} hookText - Text for the main action button.
  */
 interface AboutMeProps {
     name: string;
     roles: string[];
     tinyText?: string;
     shortDescription?: string;
-    buttonText: string;
+    hookText: string;
 }
 
 /**
@@ -26,7 +26,7 @@ interface AboutMeProps {
  * @returns {ReactElement} The AboutMe component.
  */
 const AboutMe: FC<AboutMeProps> = ({
-                                       name, roles, tinyText, shortDescription, buttonText
+                                       name, roles, tinyText, shortDescription, hookText
                                    }: AboutMeProps): ReactElement => (
     <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -66,11 +66,11 @@ const AboutMe: FC<AboutMeProps> = ({
             <InView threshold={0.1}>
                 {({inView, ref}) => (<p ref={ref} className={`text-lg mb-8 ${inView ? 'opacity-100 animated-list-item' : 'opacity-0 pointer-events-none'}`}>{shortDescription}</p>)}
             </InView>
-            <button
-                className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold flex items-center hover:bg-blue-100 transition-colors">
-                {buttonText}
-                <ArrowRight className="ml-2"/>
-            </button>
+            <h2
+                className="text-white px-6 py-3 rounded-full font-semibold flex items-center">
+                {hookText}
+                <ArrowBigDown className="ml-2"/>
+            </h2>
         </div>
     </div>);
 
