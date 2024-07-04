@@ -12,14 +12,14 @@ interface GenerateNavItemsProps {
 
 export const generateNavItems = ({navLinks, isOpen}: GenerateNavItemsProps) => {
     return navLinks.map((link, index) => (<li
-            key={index}
-            className={`${link.path === '/' ? 'nav-item' : ''} ${isOpen ? 'visible' : ''}`}
+        key={index}
+        className={`${link.path === '/' ? 'nav-item' : ''} ${isOpen ? 'visible' : ''}`}
+    >
+        <NavLink
+            to={link.path}
+            className="nav-link md:text-xl text-3xl open-sans-nav-items"
         >
-            <NavLink
-                to={link.path}
-                className="nav-link open-sans-nav-items"
-            >
-                {link.label}
-            </NavLink>
-        </li>));
+            {link.label}
+        </NavLink>
+    </li>));
 };

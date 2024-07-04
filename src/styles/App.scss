@@ -41,11 +41,7 @@ header .header {
   background-color: $header-background-color;
   display: flex;
   justify-content: space-between;
-  left: 0;
-  padding: 20px;
   position: fixed; // Make the header sticky
-  right: 0;
-  top: 0;
   transition: background-color .3s ease; // Add transition for background color
   z-index: 1000;
 
@@ -95,7 +91,6 @@ header .header {
 
         .nav-link {
           color: $primary-color;
-          font-size: 1.5em;
           padding: 10px;
           text-decoration: none;
           transition: background-color .3s ease;

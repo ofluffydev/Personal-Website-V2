@@ -1,8 +1,8 @@
 // Header.tsx
 import {useEffect, useState} from "react";
 import {NAV_LINKS, WEBSITE_TITLE} from "../../constants";
-import {generateNavItems} from "../../fluffy-pack/utils/navigationUtils";
-import {SimpleHamburger} from "./../../fluffy-pack/components/SimpleHamburger";
+import {generateNavItems} from "@/fluffy-pack/utils/navigationUtils";
+import {SimpleHamburger} from "@/fluffy-pack/components/SimpleHamburger.tsx";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function Header() {
         };
     }, []);
 
-    return (<header className="header">
+    return (<header className="header left-0 right-0 top-0 pl-4 pr-4 h-16">
         <div className="logo">
             <span className="brand">{WEBSITE_TITLE}</span>
         </div>

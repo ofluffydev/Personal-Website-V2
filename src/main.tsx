@@ -7,6 +7,9 @@ import {StrictMode} from "react";
 import Fallback from "./components/Fallback";
 import {renderToString} from "react-dom/server";
 import {SUPPORT_EMAIL} from "./constants.tsx";
+//
+// import {config} from "dotenv";
+// config({path: '../.env'});
 
 const rootElement = document.getElementById('root');
 

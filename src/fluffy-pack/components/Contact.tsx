@@ -25,6 +25,8 @@ const Contact: FC<ContactProps> = ({
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         // Here you would typically handle the form submission
+
+
         setFormSubmitted(true);
     };
 
