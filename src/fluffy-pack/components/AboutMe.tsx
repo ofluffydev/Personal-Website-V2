@@ -30,24 +30,24 @@ const AboutMe: FC<AboutMeProps> = ({
                                    }: AboutMeProps): ReactElement => (
     <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
-            <InView>
-                {({inView, ref}) => (<p ref={ref} className={inView ? 'animated-list-item' : ''}>{tinyText}</p>)}
+            <InView threshold={0.1}>
+                {({inView, ref}) => (<p ref={ref} className={inView ? 'opacity-100 animated-list-item' : 'opacity-0 pointer-events-none'}>{tinyText}</p>)}
             </InView>
-            <InView>
+            <InView threshold={0.1}>
                 {({inView, ref}) => (<h1 ref={ref}
-                                         className={inView ? "animated-list-item text-4xl md:text-6xl font-bold mb-4" : "text-4xl md:text-6xl font-bold mb-4"}>{name}</h1>)}
+                                         className={`text-4xl md:text-6xl font-bold mb-4 ${inView ? 'opacity-100 animated-list-item' : 'opacity-0 pointer-events-none'}`}>{name}</h1>)}
             </InView>
 
-            <InView>
+            <InView threshold={0.1}>
                 {({inView, ref}) => (<p ref={ref}
-                                        className={inView ? "animated-list-item text-xl md:text-2xl mb-8" : "text-xl md:text-2xl mb-8"}>{roles.map((role, index) =>
+                                        className={`text-xl md:text-2xl mb-8 ${inView ? 'opacity-100 animated-list-item' : 'opacity-0 pointer-events-none'}`}>{roles.map((role, index) =>
                     <span
                         key={index}>{role}{index < roles.length - 1 ? ' | ' : ''}</span>)}</p>)}
             </InView>
 
-            <InView>
+            <InView threshold={0.1}>
                 {({inView, ref}) => (<div ref={ref}
-                                          className={inView ? 'animated-list-item grid md:grid-cols-3 gap-8 mb-12' : 'grid md:grid-cols-3 gap-8 mb-12'}>
+                                          className={`grid md:grid-cols-3 gap-8 mb-12 ${inView ? 'opacity-100 animated-list-item' : 'opacity-0 pointer-events-none'}`}>
                         <div className="flex items-center">
                             <Code className="mr-2"/>
                             <span>Showcasing My Projects</span>
@@ -63,8 +63,8 @@ const AboutMe: FC<AboutMeProps> = ({
                     </div>)}
             </InView>
 
-            <InView>
-                {({inView, ref}) => (<p ref={ref} className={inView? 'animated-list-item text-lg mb-8' : 'text-lg mb-8'}>{shortDescription}</p>)}
+            <InView threshold={0.1}>
+                {({inView, ref}) => (<p ref={ref} className={`text-lg mb-8 ${inView ? 'opacity-100 animated-list-item' : 'opacity-0 pointer-events-none'}`}>{shortDescription}</p>)}
             </InView>
             <button
                 className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold flex items-center hover:bg-blue-100 transition-colors">

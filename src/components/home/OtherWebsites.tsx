@@ -3,7 +3,7 @@ import WebsiteCard from "../../fluffy-pack/components/WebsiteCard.tsx";
 
 const websiteData = [{
     name: "Toybox Motorsports",
-    url: "https://toyboxamarillo.com.com",
+    url: "https://toyboxamarillo.com",
     description: "Website made for the business \"Toybox Motorsports.\"",
     icon: <Car className="w-6 h-6"/>
 }, {

@@ -10,7 +10,7 @@ const router = createBrowserRouter([{
     element: <App/>, errorElement: <ErrorPage/>, children: [{
         path: "/", element: <Home/>,
     }, {
-        path: "/contact", element: <Contact email={'support@kadenfrisk.com'} github={'ofluffydev'}/>,
+        path: "/contact", element: <Contact email={'support@kadenfrisk.com'} x={'KadenFrisk'} discordUser={'ofluffy'} phone={'(806) 443-0175'} includeForm={true} github={'ofluffydev'}/>,
     }, {
         path: "/about", element: <About/>,
     }, {

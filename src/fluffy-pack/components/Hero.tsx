@@ -1,5 +1,6 @@
 import {ReactElement} from "react";
 import {InView} from "react-intersection-observer";
+import {ArrowBigDown} from "lucide-react";
 
 /**
  * `Hero` component props definition.
@@ -38,6 +39,7 @@ const Hero = ({welcomeText, secondaryText}: HeroProps): ReactElement => {
                     {secondaryText}
                 </p>}
             </InView>
+            <ArrowBigDown className={'animate-bounce flex justify-center items-center h-10 w-screen pt-4'}/>
         </div>
     </div>;
 };
