@@ -4,6 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Testimonia';
+  src: url('../assets/fonts/testimonia-font/Testimonia-3zp8X.ttf') format('truetype'),
+  url('../assets/fonts/testimonia-font/Testimonia-ZVA2q.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-testimonia {
+  font-family: 'Testimonia', Arial, sans-serif;
+}
+
 // Variables
 $header-background-color: #333;
 $primary-color: #fff;

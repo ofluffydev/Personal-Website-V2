@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="footer-content">
                 <div>
                     <h3>{COMPANY_NAME}</h3>
-                    <p>Add super catchy tagline</p>
+                    <p className="font-testimonia text-3xl">Don't die wondering</p>
                 </div>
                 <div>
                     <h4>Quick Links</h4>
