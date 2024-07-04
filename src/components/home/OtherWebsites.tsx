@@ -7,7 +7,7 @@ const websiteData = [{
     description: "Website made for the business \"Toybox Motorsports.\"",
     icon: <Car className="w-6 h-6"/>
 }, {
-    name: "Portfolio Showcase",
+    name: "The Photo Store",
     url: "https://thephotostore.com",
     description: "Photography business website. As of writing this, it is currently a website I didn't make, but I'm currently working on one to replace it!",
     icon: <Camera className="w-6 h-6"/>
