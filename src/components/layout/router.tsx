@@ -1,16 +1,16 @@
 import {createBrowserRouter} from "react-router-dom";
 import App from "../../App";
 import Home from "../../pages/Home";
-import Contact from "../../pages/Contact";
 import About from "../../pages/About";
 import Services from "../../pages/Services";
 import ErrorPage from "../../fluffy-pack/components/ErrorPage.tsx";
+import Contact from "@/fluffy-pack/components/Contact.tsx";
 
 const router = createBrowserRouter([{
     element: <App/>, errorElement: <ErrorPage/>, children: [{
         path: "/", element: <Home/>,
     }, {
-        path: "/contact", element: <Contact/>,
+        path: "/contact", element: <Contact email={'support@kadenfrisk.com'} github={'ofluffydev'}/>,
     }, {
         path: "/about", element: <About/>,
     }, {

@@ -1,6 +1,7 @@
 import {createRoot} from 'react-dom/client';
 import {RouterProvider} from "react-router-dom";
 import '../src/styles/App.scss'
+import '../src/styles/globals.css'
 import router from "./components/layout/router";
 import {StrictMode} from "react";
 import Fallback from "./components/Fallback";
