@@ -25,7 +25,7 @@ export default function Header() {
         };
     }, []);
 
-    return (<header className="header left-0 right-0 top-0 pl-4 pr-4 h-16">
+    return (<header className="header left-0 right-0 top-0 pl-4 pr-4 w-screen h-16">
         <div className="logo">
             <span className="brand">{WEBSITE_TITLE}</span>
         </div>

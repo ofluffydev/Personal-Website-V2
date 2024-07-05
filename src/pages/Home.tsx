@@ -8,7 +8,7 @@ import NeedAWebsite from "@/components/home/NeedAWebsite.tsx";
 const roles = ['Web Developer', 'Course Creator', 'Project Enthusiast'];
 
 function Home() {
-    return (<div className={'homePage'}>
+    return (<div className={'homePage overflow-hidden'}>
         <Hero welcomeText={'Welcome!'} secondaryText={'Kaden\'s corner of the internet'}/>
         <AboutMe tinyText={'Short Section About Me :D'} hookText={'Scroll to see some of my work'} name={'Kaden Frisk'}
                  roles={roles}
