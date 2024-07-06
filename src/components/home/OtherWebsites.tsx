@@ -1,18 +1,11 @@
-import {Box, Brush, Camera, Car, History} from 'lucide-react';
+import {Box, Brush, Camera, History} from 'lucide-react';
 import WebsiteCard from "../../fluffy-pack/components/WebsiteCard.tsx";
-import toyboxImage from "../../assets/Images/toybox-motorsports.jpg";
 import tpsImage from "../../assets/Images/tps.png";
 import spinnyCarImage from "../../assets/Images/spinny-car.png";
 import loomImage from "../../assets/Images/loom.png";
 import oldWebsiteImage from "../../assets/Images/old.png";
 
 const websiteData = [{
-    name: "Toybox Motorsports",
-    url: "https://toyboxamarillo.com",
-    image: toyboxImage,
-    description: "Website made for the business \"Toybox Motorsports.\"",
-    icon: <Car className="w-6 h-6"/>
-}, {
     name: "The Photo Store",
     url: "https://thephotostore.com",
     image: tpsImage,
