@@ -1,9 +1,9 @@
 import {Box, Brush, Camera, History} from 'lucide-react';
 import WebsiteCard from "../../fluffy-pack/components/WebsiteCard.tsx";
-import tpsImage from "../../assets/Images/tps.png";
-import spinnyCarImage from "../../assets/Images/spinny-car.png";
-import loomImage from "../../assets/Images/loom.png";
-import oldWebsiteImage from "../../assets/Images/old.png";
+import tpsImage from "../../assets/Images/tps.webp";
+import spinnyCarImage from "../../assets/Images/spinny-car.webp";
+import loomImage from "../../assets/Images/loom.webp";
+import oldWebsiteImage from "../../assets/Images/old.webp";
 
 const websiteData = [{
     name: "The Photo Store",
