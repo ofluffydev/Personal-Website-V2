@@ -1,4 +1,3 @@
-// Header.tsx
 import {useEffect, useState} from "react";
 import {NAV_LINKS, WEBSITE_TITLE} from "../../constants";
 import {generateNavItems} from "@/fluffy-pack/utils/navigationUtils";
