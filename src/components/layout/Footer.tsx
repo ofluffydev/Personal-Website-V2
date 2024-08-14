@@ -10,10 +10,6 @@ const Footer = () => {
         <div className="container">
             <div className="footer-content">
                 <div>
-                    <h3>{COMPANY_NAME}</h3>
-                    <p className="font-testimonia text-3xl">Don't die wondering</p>
-                </div>
-                <div>
                     <h4>Quick Links</h4>
                     <ul>
                         {NAV_LINKS.map((link, index) => (<li key={index}>
